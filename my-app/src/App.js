@@ -1,21 +1,34 @@
 import {
  LivepeerConfig,
+ ThemeConfig,
  createReactClient,
  studioProvider,
 } from '@livepeer/react';
-import "bootstrap/dist/css/bootstrap.min.css";
+import * as React from 'react';
+import DemoPlayer from "./components/DemoPlayer"
 
-const client = createReactClient({
- provider: studioProvider({ apiKey: '438d1181-0459-47b3-b692-017710554d01' }),
+
+const livepeerClient = createReactClient({
+ provider: studioProvider({
+ apiKey: '438d1181-0459-47b3-b692-017710554d01',
+ }),
 });
 
-function App() {
- return (
-// <LivepeerConfig client={client}>
-// <SomeComponent /> // some component here
-// </LivepeerConfig>
-    <div style="font-size:100"> Yo Moma </div>
- );
-}
+const theme: ThemeConfig = {
+ colors: {
+ accent: 'rgb(0, 145, 255)',
+ containerBorderColor: 'rgba(0, 145, 255, 0.9)',
+ },
+ fonts: {
+ display: 'Inter',
+ },
+};
 
-export default App;
+export const App = () => {
+ return (
+ <LivepeerConfig client={livepeerClient} theme={theme}>
+    <DemoPlayer />
+ </LivepeerConfig>
+ );
+};
+
