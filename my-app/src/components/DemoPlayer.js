@@ -1,11 +1,13 @@
 import { Player } from '@livepeer/react';
 
-//import Image from 'next/image';
+import Image from 'next/image';
+
+import blenderPoster from '../assets/blender-poster.png';
+
 
 const playbackId =
  'bafybeida3w2w7fch2fy6rfvfttqamlcyxgd3ddbf4u25n7fxzvyvcaegxy';
 
-//import blenderPoster from '../../public/images/blender-poster.png';
 
 const PosterImage = () => {
  return (
@@ -38,3 +40,5 @@ export const DemoPlayer = () => {
      />
      );
 };
+
+export default DemoPlayer;
