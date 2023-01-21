@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+ LivepeerConfig,
+ createReactClient,
+ studioProvider,
+} from '@livepeer/react';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const client = createReactClient({
+ provider: studioProvider({ apiKey: '438d1181-0459-47b3-b692-017710554d01' }),
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ return (
+// <LivepeerConfig client={client}>
+// <SomeComponent /> // some component here
+// </LivepeerConfig>
+    <div style="font-size:100"> Yo Moma </div>
+ );
 }
 
 export default App;
