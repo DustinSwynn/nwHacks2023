@@ -1,35 +1,32 @@
 import { Player } from '@livepeer/react';
-
 import Image from 'next/image';
-
-import blenderPoster from '../assets/blender-poster.png';
-
+// import blenderPoster from '..\\assets\\blender-poster.png';
 
 const playbackId =
- 'bafybeida3w2w7fch2fy6rfvfttqamlcyxgd3ddbf4u25n7fxzvyvcaegxy';
+ '3aa8w947namudd9n';
 
 
-const PosterImage = () => {
- return (
- <Image
- src={blenderPoster}
- layout="fill"
- objectFit="cover"
- priority
- placeholder="blur"
- />
- );
-};
+// const PosterImage = () => {
+//  return (
+//  <Image
+//  src={blenderPoster}
+//  layout="fill"
+//  objectFit="cover"
+//  priority
+//  placeholder="blur"
+//  />
+//  );
+// };
 
 export const DemoPlayer = () => {
  return (
      <Player
-         title="Waterfalls"
+         title="Balls"
          playbackId={playbackId}
          showPipButton
          showTitle={false}
          aspectRatio="16to9"
-         poster={<PosterImage />}
+        //  poster={<PosterImage />}
          controls={{
          autohide: 3000,
          }}

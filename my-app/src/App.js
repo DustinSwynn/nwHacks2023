@@ -5,6 +5,7 @@ import {
  studioProvider,
 } from '@livepeer/react';
 import * as React from 'react';
+import DemoAsset from "./components/DemoAsset"
 import DemoPlayer from "./components/DemoPlayer"
 
 
@@ -27,6 +28,7 @@ const theme: ThemeConfig = {
 export const App = () => {
  return (
  <LivepeerConfig client={livepeerClient} theme={theme}>
+    {/* <DemoAsset /> */}
     <DemoPlayer />
  </LivepeerConfig>
 
