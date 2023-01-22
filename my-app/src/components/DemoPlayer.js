@@ -1,27 +1,19 @@
 import { Player } from '@livepeer/react';
-import Image from 'next/image';
-// import blenderPoster from '..\\assets\\blender-poster.png';
+import { useAsset } from '@livepeer/react';
 
 const playbackId =
  '3aa8w947namudd9n';
 
 
-// const PosterImage = () => {
-//  return (
-//  <Image
-//  src={blenderPoster}
-//  layout="fill"
-//  objectFit="cover"
-//  priority
-//  placeholder="blur"
-//  />
-//  );
-// };
 
 export const DemoPlayer = () => {
+    const asset = useAsset({ assetId: '3aa85b50-728a-4dec-8e09-7be53c329725' });
+    console.log(asset);    
  return (
-     <Player
-         title="Balls"
+    <div>
+        Asset: {asset.data.name}
+        <Player
+         title={asset.data.name}
          playbackId={playbackId}
          showPipButton
          showTitle={false}
@@ -35,6 +27,7 @@ export const DemoPlayer = () => {
              radii: { containerBorderRadius: '10px' },
          }}
      />
+    </div>
      );
 };
 
